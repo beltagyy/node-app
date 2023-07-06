@@ -47,7 +47,7 @@ res.send('<h1> Hello there! </h1>');
 app.get('/data', async (req, res) => {
     
     const products = await redisClient.get('products');
-    res.send('<h1> Hello there! </h1> <h2> ${products}</h2>');
+    res.send('<h1> Hello there from AWS! </h1> <h2> ${products}</h2>');
 
 });
 
