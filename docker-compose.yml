@@ -2,6 +2,7 @@ version: "3"
 services: 
  node-app: 
   container_name: test-docker
+  image: beltagyy/test-docker
   build: .
   volumes:
     - ./src:/app/src:ro

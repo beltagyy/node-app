@@ -40,7 +40,7 @@ client.connect()
 app.get('/', (req, res) => {
 
 redisClient.set('products', 'products..');    
-res.send('<h1> Hello there from aws! </h1>');
+res.send('<h1> Hello there from aws, using docker hub! </h1>');
 
 });
 
