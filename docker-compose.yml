@@ -5,13 +5,14 @@ services:
   image: beltagyy/test-docker
   build: .
   volumes:
-    - ./src:/app/src:ro
-  ports:
-    - 4000:4000
+     - ./src:/app/src:ro
+  # ports:
+  #   - 4000:4000
   env_file: 
     - ./.env
   depends_on:
     - postgres
+    - redis
 #  mongo:
 
 #     image: mongo

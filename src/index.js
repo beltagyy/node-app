@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const redis = require("redis");
 const {Client} = require('pg');
+const os = require ("node:os");
 
 
 //init app
@@ -39,8 +40,9 @@ client.connect()
 .then(()=> console.log('connected to postgres db...'))
 app.get('/', (req, res) => {
 
-redisClient.set('products', 'products..');    
-res.send('<h1> Hello there from aws, using docker hub! </h1>');
+redisClient.set('products', 'products..');  
+console.log('traffic from ${os.hostname}' ,os.hostname);  
+res.send('<h1> Hello there 123!!! </h1>');
 
 });
 
