@@ -1,7 +1,7 @@
 version: "3"
 services: 
  node-app: 
-  container_name: test-docker
+  # container_name: test-docker
   image: beltagyy/test-docker
   build: .
   volumes:
