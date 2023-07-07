@@ -8,11 +8,21 @@ services:
      - ./src:/app/src:ro
   # ports:
   #   - 4000:4000
+  deploy:
+      replicas: 4
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
   env_file: 
     - ./.env
   depends_on:
     - postgres
     - redis
+
+
 #  mongo:
 
 #     image: mongo
